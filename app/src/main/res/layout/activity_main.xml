@@ -1,44 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shape_background"
     tools:context=".MainActivity">
 
-    <!-- activity_main.xml -->
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/camera_ic3"/>
+
+        <TextView
+            android:id="@+id/txtView_BemVindo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_logo"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:text="Bem-Vindo(a)"
+            android:textColor="#C102F6"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
 
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
+            android:layout_below="@+id/txtView_BemVindo"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_margin="32dp"
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/passwordEditText"
+            android:layout_below="@+id/emailEditText"
+            android:layout_margin="32dp"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Senha"
+            android:textColorHint="@color/white"
             android:inputType="textPassword" />
 
         <Button
+            android:layout_below="@+id/loginButton"
             android:id="@+id/registerButton"
+            android:layout_margin="32dp"
+            android:backgroundTint="#C102F6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registrar" />
 
         <Button
+            android:layout_below="@+id/passwordEditText"
             android:id="@+id/loginButton"
+            android:layout_margin="32dp"
+            android:backgroundTint="#C102F6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login" />
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>
