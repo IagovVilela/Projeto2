@@ -10,20 +10,20 @@
         android:id="@+id/select_image_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Image"
-
+        android:text="Selecione a Imagem"
         android:background="#00000000"
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="130dp" />
 
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@+id/select_image_button"
         android:background="@color/white"
-        android:layout_marginTop="-15dp"
-        android:layout_marginHorizontal="140dp"/>
+        android:layout_marginTop="-14dp"
+        android:layout_marginHorizontal="110dp"/>
 
     <ImageView
         android:id="@+id/image_view"
@@ -45,6 +45,17 @@
         android:layout_below="@id/image_view"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
+    <Button
+        android:id="@+id/informacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Dados"
+        android:paddingHorizontal="64dp"
+        android:textSize="16dp"
+        android:backgroundTint="#C102F6"
+        android:layout_below="@id/upload_image_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/logout_btn"
@@ -60,6 +71,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="683dp"
         android:text="⬅" />
+
+
 
 
 </RelativeLayout>

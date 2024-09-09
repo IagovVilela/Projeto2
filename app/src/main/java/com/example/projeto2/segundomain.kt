@@ -31,6 +31,8 @@ class segundomain : AppCompatActivity() {
     private lateinit var imageView: ImageView
     private var imageUri: Uri? = null
     private lateinit var storage: FirebaseStorage
+    private lateinit var informacaoBtnButton: Button
+
 
     companion object {
         private const val PICK_IMAGE_REQUEST = 1
@@ -49,6 +51,9 @@ class segundomain : AppCompatActivity() {
         uploadImageButton = findViewById(R.id.upload_image_button)
         logoutBtnButton = findViewById(R.id.logout_btn)
         imageView = findViewById(R.id.image_view)
+        informacaoBtnButton = findViewById(R.id.informacao)
+
+
 
         // Verificar permissões de armazenamento
 
@@ -70,14 +75,16 @@ class segundomain : AppCompatActivity() {
         logoutBtnButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // Finaliza a activity atual para que o usuário não possa voltar para ela
+            finish()
         }
 
-        // Configurar o botão para listar imagens
 
 
         // Ativar links clicáveis no TextView
-
+        informacaoBtnButton.setOnClickListener {
+            val intent = Intent(this, informacaoMain::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun openFileChooser() {
