@@ -3,57 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/shape_upload">
 
-    <Button
-        android:id="@+id/logout_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sair"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
-
-
-    <!-- Botão para selecionar uma imagem -->
     <Button
         android:id="@+id/select_image_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecionar Imagem"
-        android:layout_alignParentTop="true"
+        android:text="Select Image"
+
+        android:background="#00000000"
+        android:textSize="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="130dp" />
 
-    <!-- Botão para fazer upload da imagem -->
-    <Button
-        android:id="@+id/upload_image_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fazer Upload"
-        android:layout_below="@id/select_image_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Botão para listar as imagens -->
-
-
-    <!-- ImageView para exibir a imagem selecionada -->
-
-    <!-- TextView para exibir os links das imagens -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/select_image_button"
+        android:background="@color/white"
+        android:layout_marginTop="-15dp"
+        android:layout_marginHorizontal="140dp"/>
 
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_below="@id/select_image_button"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="188dp"
-        android:layout_marginEnd="116dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:scaleType="centerCrop" />
 
+    <Button
+        android:id="@+id/upload_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:paddingHorizontal="64dp"
+        android:textSize="16dp"
+        android:backgroundTint="#C102F6"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="50dp"
+        android:textColor="#E91E87"
+        android:paddingVertical="-64dp"
+        android:textStyle="italic|bold"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-32dp"
+        android:background="#00000000"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="683dp"
+        android:text="⬅" />
 
 
 </RelativeLayout>
